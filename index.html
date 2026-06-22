@@ -799,7 +799,7 @@ function loadWishes(count){
     document.getElementById('wishesDisplay').innerHTML='';
     if(snap.exists()){
       const arr=[];
-      snap.forEach(c => arr.push(c.val()));
+      snap.forEach(c => { arr.push(c.val()); });
       arr.reverse().forEach(w => renderWish(w.name,w.msg));
     }
   });
